@@ -14,3 +14,10 @@
     import 'relative/path/to/stylesheet.scss';
 
 */
+.button:hover {
+  background-color: #4caf50;
+  border-radius: 8px;
+}
+.button {
+  border-radius: 8px;
+}
