@@ -20,4 +20,22 @@
 }
 .button {
   border-radius: 8px;
+  width: 4%;
+}
+
+.button2:hover {
+  background-color: #4caf50;
+  border-radius: 8px;
+}
+.button2 {
+  border-radius: 8px;
+  width: 4%;
+}
+
+.container {
+  background-image: url(https://cdn.hipwallpaper.com/i/92/52/c3Qb7N.jpg);
+  background-size: cover;
+}
+body {
+  color: white;
 }
