@@ -15,7 +15,7 @@
 
 */
 .button:hover {
-  background-color: #4caf50;
+  background-color: #f9fd00;
   border-radius: 8px;
 }
 .button {
@@ -24,7 +24,7 @@
 }
 
 .button2:hover {
-  background-color: #4caf50;
+  background-color: #fdada7;
   border-radius: 8px;
 }
 .button2 {
@@ -33,9 +33,24 @@
 }
 
 .container {
-  background-image: url(https://cdn.hipwallpaper.com/i/92/52/c3Qb7N.jpg);
+  background-image: url(https://images-na.ssl-images-amazon.com/images/S/sgp-catalog-images/region_US/viacom-SpongeBob-Sea1-Full-Image_GalleryBackground-en-US-1552031946529._SX1080_.jpg);
   background-size: cover;
 }
 body {
   color: white;
+}
+
+.flipper {
+  transform: scaleY(-1);
+}
+
+.card-header {
+  border: none;
+}
+
+.bg-transparent {
+  font-size: 40px;
+}
+
+.card-body {
 }
