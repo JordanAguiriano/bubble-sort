@@ -13,63 +13,45 @@
                 <button onclick="sort()" class="button">sort</button>
                 <button onclick="draw()" class="button2">draw</button>
             </span>
-                <div id="container">
-                </div>
+                <div id="container"></div>
         </div>
-        <script>
-        let numbers = [2,24,11,6,23,3]
+        
 
-        const bubbleSort = (arr) => {
-        let wall = arr.length - 1;
-            while (wall > 0){
-            let index = 0;
-            while (index < wall) {
-            if (arr[index] > arr[index + 1]) { 
-            let aux = arr[index]; 
-            arr[index] = arr[index + 1];
-            arr[index + 1] = aux;
-          }
-          index++;
-        }
-        wall--;
-    }
-	return arr;
-};
-function draw() {
-    document.querySelector("#container").innerHTML=`<div class="container-fluid text-center">
 
-            <div class="card-container" id="card-container" onclick="generate()">
-                <div class="card mb-3 mx-auto  shadow-boxing" style="max-width: 18rem; height:350px">
-                    <div class="card-header bg-transparent text-left" id="card-suit-header"></div>
-                    <div class="card-body">
-                        <h1 class="card-title" id="card-number"></h1>
-                    </div>
-                    <div class="card-footer bg-transparent text-right flipper" id="card-suit-footer"></div>
-                </div>
-            </div>
-        </div>`
-}
 
-        </script>
+
 
         <script>
 
-        function generate() {
+        function draw() {
             let callColors = ['red', 'black']
             let suitHeader = ['&hearts;', '&diams;', '&clubs;','&spades;']
             let suitBody = ['A', 2,3,4,5,6,7,8,9,10,'J','Q','K']
 
             selectedSuit = suitHeader[Math.floor(Math.random() * suitHeader.length)];
             selectedBody = suitBody[Math.floor(Math.random() * suitBody.length)];
+            let colors= callColors[Math.floor(Math.random() * callColors.length)];
+            
+            document.querySelector("#container").innerHTML= `<div class="container-fluid text-center">
 
-            document.querySelector('#card-container').style.color = callColors[Math.floor(Math.random() * callColors.length)];
-            document.querySelector('#card-suit-header').innerHTML = selectedSuit;
-            document.querySelector('#card-suit-footer').innerHTML = selectedSuit;
-            document.querySelector('#card-number').innerHTML = selectedBody;
+            <div class="card-container" id="card-container">
+                <div class="card mb-3 mx-auto  shadow-boxing" style="max-width: 18rem; height:350px">
+                    <div class="card-header bg-transparent text-left" id="card-suit-header">${selectedSuit}</div>
+                    <div class="card-body">
+                        <h1 class="card-title" id="card-number">${selectedBody}</h1>
+                    </div>
+                    <div class="card-footer bg-transparent text-right flipper" id="card-suit-footer">${selectedSuit}</div>
+                </div>
+            </div>
+        </div>`
+            
+            
+            document.querySelector('#card-container').style.color = colors
+           
+      
         }
 
-        generate();
-
+        
 
         var input = document.getElementById("myInput");
 
